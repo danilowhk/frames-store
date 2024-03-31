@@ -89,7 +89,7 @@ app.frame("/", async (c) => {
   const balance = await remainingSupply();
   if (typeof balance == "number" && balance === 0) {
     return c.res({
-      image:"https://dweb.mypinata.cloud/ipfs/QmeeXny8775RQBZDhSppkRN15zn5nFjQUKeKAvYvdNx986",
+      image:"",
       imageAspectRatio: "1:1",
       intents: [
         <Button.Link href="https://kakarot.org">
@@ -101,7 +101,7 @@ app.frame("/", async (c) => {
   } else {
     return c.res({
       action: "/finish",
-      image:"https://dweb.mypinata.cloud/ipfs/QmeC7uQZqkjmc1T6sufzbJWQpoeoYjQPxCXKUSoDrXfQFy",
+      image:"",
       imageAspectRatio: "1:1",
       intents: [
         <Button.Transaction target="/buy/0.0005">
@@ -119,7 +119,7 @@ app.frame("/", async (c) => {
 app.frame("/finish", (c) => {
   return c.res({
     image:
-      "https://dweb.mypinata.cloud/ipfs/QmZPysm8ZiR9PaNxNGQvqdT2gBjdYsjNskDkZ1vkVs3Tju",
+      "",
       imageAspectRatio: "1:1",
       intents: [
         <Button.Link href="https://kakarot.org">
@@ -134,7 +134,7 @@ app.frame("/ad", async (c) => {
   return c.res({
     action: "/coupon",
     image:
-    "https://dweb.mypinata.cloud/ipfs/QmeUmBtAMBfwcFRLdoaCVJUNSXeAPzEy3dDGomL32X8HuP",
+    "",
     imageAspectRatio: "1:1",
     intents: [
       <TextInput placeholder="Wallet Address (not ENS)" />,
@@ -172,7 +172,7 @@ app.frame("/coupon", async (c) => {
   return c.res({
     action: "/finish",
     image:
-    "https://dweb.mypinata.cloud/ipfs/QmeUmBtAMBfwcFRLdoaCVJUNSXeAPzEy3dDGomL32X8HuP",
+    "",
     imageAspectRatio: "1:1",
     intents: [
       <Button.Transaction target="/buy/0.00025">
